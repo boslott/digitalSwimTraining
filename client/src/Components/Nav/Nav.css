@@ -1,0 +1,40 @@
+.nav-whole {
+  background-color: #2779BD;  /* Blue Dark */
+  color: #fff;
+  border-style: solid;
+  border-color: #606F7B;  /* Gray Darker */
+  border-width: 0.1rem;
+}
+
+.nav-section {
+  padding: 1rem;
+}
+
+.top-half a, .bottom-half a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.top-half a:link,
+.top-half a:visited, 
+.bottom-half a:link,
+.bottom-half a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-page-link {
+  border-style: dashed;
+  border-width: 0 0.1rem 0 0;
+  border-color: #fff;
+  padding: 1rem;
+  width: 15%;
+  text-align: center;
+}
+
+div.nav-page-link:nth-child(2) {
+  border-style: dashed;
+  border-width: 0 0.1rem 0;
+  border-color: #fff;
+}
