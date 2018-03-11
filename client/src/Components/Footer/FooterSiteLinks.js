@@ -11,23 +11,23 @@ class FooterSiteLinks extends Component {
         <div className='row'>
           <ul className='link-list'>
             <li>
-              <Link to='/' className='footer-link__text footer-link__text-grow'>
+              <Link to='/about' className='footer-link__text footer-link__text-grow'>
                 About
               </Link>
             </li>
             <li>
-              <Link to='/' className='footer-link__text footer-link__text-grow'>
+              <Link to='/contact' className='footer-link__text footer-link__text-grow'>
                 Contact
               </Link>
             </li>
             <li>
-              <Link to='/' className='footer-link__text footer-link__text-grow'>
+              <Link to='/register' className='footer-link__text footer-link__text-grow'>
                 Register
               </Link>
             </li>
             <li>
-              <Link to='/' className='footer-link__text footer-link__text-grow'>
-                Login
+              <Link to='/signin' className='footer-link__text footer-link__text-grow'>
+                Sign In
               </Link>
             </li>
             <li>
