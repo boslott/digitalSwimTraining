@@ -16,26 +16,46 @@ class Nav extends Component {
       <header className='container-fluid nav-whole'>
         <div className='container nav-inner'>
           <div className='row nav-section top-half'>
-            <div className='col-sm-8'>
+            <div className='col-sm-9'>
               <Logo />
             </div>
-            <div className='col-sm-4 flex items-center'>
+            <div className='col-sm-3 flex items-center'>
               <SignInLinks />
             </div>
           </div>
           <div className='row nav-section bottom-half d-flex justify-center'>
             <div className='col-sm-1'></div>
             <div className='nav-page-link col-sm-2'>
-              <NavPageLink icon='home' linkText='&nbsp; Home' link='/' />
+              <NavPageLink
+                icon='home'
+                linkText='&nbsp; HOME'
+                link='/'
+                location={this.props.location}
+              />
             </div>
             <div className='nav-page-link col-sm-2'>
-              <NavPageLink icon='info-circle' linkText='&nbsp; About' link='/about' />
+              <NavPageLink
+                icon='info-circle'
+                linkText='&nbsp; ABOUT'
+                link='/about'
+                location={this.props.location}
+              />
             </div>
             <div className='nav-page-link col-sm-2'>
-              <NavPageLink icon='list-ul' linkText='&nbsp; Courses' link='/courses' />
+              <NavPageLink
+                icon='list-ul'
+                linkText='&nbsp; COURSES'
+                link='/courses'
+                location={this.props.location}
+              />
             </div>
             <div className='nav-page-link col-sm-2'>
-              <NavPageLink icon='envelope' linkText='&nbsp; Contact' link='/contact' />
+              <NavPageLink
+                icon='envelope'
+                linkText='&nbsp; CONTACT'
+                link='/contact'
+                location={this.props.location}
+              />
             </div>
             <div className='col-sm-1'></div>
           </div>

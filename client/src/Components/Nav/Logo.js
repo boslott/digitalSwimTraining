@@ -8,7 +8,7 @@ class Logo extends Component {
       <div>
         <Link to='/'>
           <img src={logo} alt='Digital Swim Training' width='100'/>
-          &nbsp; Digital Swim Training
+          &nbsp; DIGITAL SWIM TRAINING
         </Link>
       </div>
     );

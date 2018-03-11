@@ -5,8 +5,8 @@ class SignInLinks extends Component {
   render() {
     return (
       <div>
-        <Link to='/register'> Register &nbsp; </Link>
-        <Link to='/signin'> &nbsp; Sign In </Link>
+        <Link to='/register'> REGISTER &nbsp; </Link>
+        <Link to='/signin'> &nbsp; SIGN IN </Link>
       </div>
     );
   }

@@ -3,9 +3,10 @@ import Nav from '../Components/Nav/Nav';
 
 class Home extends Component {
   render() {
+    const location = this.props.location;
     return (
       <div>
-        <Nav />
+        <Nav location={location} />
       </div>
     );
   }

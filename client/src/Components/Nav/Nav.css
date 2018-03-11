@@ -24,6 +24,15 @@
   text-decoration: none;
 }
 
+.top-half a:hover,
+.top-half a:active, 
+.bottom-half a:hover,
+.bottom-half a:active,
+a.active {
+  color: #FFED4A !important;
+  text-decoration: none;
+}
+
 .nav-page-link {
   border-style: dashed;
   border-width: 0 0.1rem 0 0;
@@ -38,3 +47,4 @@ div.nav-page-link:nth-child(2) {
   border-width: 0 0.1rem 0;
   border-color: #fff;
 }
+
