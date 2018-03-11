@@ -12,6 +12,8 @@ import {
 
 // Pages
 import Home from './Pages/Home';
+import Register from './Pages/Register';
+import SignIn from './Pages/SignIn';
 
 class App extends Component {
   render() {
@@ -20,6 +22,8 @@ class App extends Component {
         <div className="App">
           <Switch>
             <Route exact path='/' component={Home} />
+            <Route exact path='/register' component={Register} />
+            <Route exact path='/signin' component={SignIn} />
           </Switch>
         </div>
       </Router>

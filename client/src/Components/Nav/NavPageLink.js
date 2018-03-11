@@ -7,11 +7,11 @@ class NavPageLink extends Component {
   render() {
     return (
       <div>
-        <Link to={this.props.link}
-        className={
-            this.props.location.pathname.endsWith(this.props.link) ? 'active' : '' 
-        }
-        >
+        <Link
+          to={this.props.link}
+          className={
+              this.props.location.pathname.endsWith(this.props.link) ? 'active' : '' 
+          }>
           <FontAwesomeIcon icon={this.props.icon} size='lg'/>
           {this.props.linkText}
         </Link>

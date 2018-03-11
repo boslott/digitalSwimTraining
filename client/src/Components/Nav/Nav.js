@@ -20,7 +20,7 @@ class Nav extends Component {
               <Logo logoWidth={100} />
             </div>
             <div className='col-sm-3 flex items-center'>
-              <SignInLinks />
+              <SignInLinks location={this.props.location} />
             </div>
           </div>
           <div className='row nav-section bottom-half d-flex justify-center'>
