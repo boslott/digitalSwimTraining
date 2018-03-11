@@ -27,6 +27,12 @@ module.exports = {
     "no-console": [
       "error",
       { allow: ["warn", "error", "log"] }
+    ],
+    "max-len": [
+      "error", {
+        "ignoreComments": true,
+        "tabWidth": 2,
+      }
     ]
   }
 };
