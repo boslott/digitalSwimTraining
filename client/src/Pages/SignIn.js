@@ -4,7 +4,8 @@ import React, { Component } from 'react';
 // Components
 import Nav from '../Components/Nav/Nav';
 import Footer from '../Components/Footer/Footer';
-import SignInForm from '../Components/SignInForm/SignInForm';
+import SignInForm from '../Components/SignInForms/SignInForm';
+import ResetPassForm from '../Components/SignInForms/ResetPassForm';
 
 class SignIn extends Component {
   render() {
@@ -17,6 +18,7 @@ class SignIn extends Component {
               <div className='col-sm-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2'>
                 <div style={{minHeight: '50vh'}}>
                 <SignInForm />
+                <ResetPassForm />
                 </div>
               </div>
             </div>
