@@ -6,7 +6,7 @@ import './Nav.css';
 
 // Components
 import NavPageLink from './NavPageLink';
-import Logo from './Logo';
+import Logo from '../Logo/Logo';
 import SignInLinks from './SignInLinks';
  
 
@@ -17,7 +17,7 @@ class Nav extends Component {
         <div className='container nav-inner'>
           <div className='row nav-section top-half'>
             <div className='col-sm-9'>
-              <Logo />
+              <Logo logoWidth={100} />
             </div>
             <div className='col-sm-3 flex items-center'>
               <SignInLinks />

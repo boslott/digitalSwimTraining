@@ -1,0 +1,45 @@
+.footer-outer {
+  background-color: #2779BD;  /* Blue Dark */
+}
+
+.social-link__bg {
+  background-color: #fff;
+  color: #2779BD;
+  border-radius: 50%;
+  width: 3.2rem;
+  height: 3.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+.copy {
+  color: #fff;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.link-list {
+  list-style-type: none;
+}
+
+.footer-link__text:link,
+.footer-link__text:visited {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.footer-link__text:hover,
+.footer-link__text:active,
+.footer-link__social:hover,
+.footer-link__social:active {
+  color: #FFED4A !important;
+  text-decoration: none;
+}
+
+.footer-link__text-grow:hover,
+.footer-link__text-grow:active {
+  font-size: 1.3rem;
+}
