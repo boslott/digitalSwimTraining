@@ -6,8 +6,8 @@ class Logo extends Component {
   render() {
     return (
       <div>
-        <Link to='/'>
-          <img src={logo} alt='Digital Swim Training' width='100'/>
+        <Link to='/' className={this.props.customClass ? this.props.customClass : ''}>
+          <img src={logo} alt='Digital Swim Training' width={this.props.logoWidth}/>
           &nbsp; DIGITAL SWIM TRAINING
         </Link>
       </div>
