@@ -1,5 +1,8 @@
 .footer-outer {
   background-color: #2779BD;  /* Blue Dark */
+  border-style: solid;
+  border-width: 0.1rem 0 0 0;
+  border-top-color: #3490DC;  /* Gray Darker */
 }
 
 .social-link__bg {

@@ -6,7 +6,7 @@ class FooterSiteLinks extends Component {
     return (
       <div>
         <div className='row pl-5 my-4'>
-          <h4>Site Links</h4>
+          <h4>SITE LINKS</h4>
         </div>
         <div className='row'>
           <ul className='link-list'>

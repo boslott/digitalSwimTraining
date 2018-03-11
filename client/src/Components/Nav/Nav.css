@@ -2,12 +2,17 @@
   background-color: #2779BD;  /* Blue Dark */
   color: #fff;
   border-style: solid;
-  border-color: #606F7B;  /* Gray Darker */
-  border-width: 0.1rem;
+  border-top-color: #3490DC;  /* Gray Darker */
+  border-top-width: 0.7rem;
 }
 
 .nav-section {
   padding: 1rem;
+}
+
+.seperate {
+  color: #fff;
+  font-size: 1.7rem;
 }
 
 .top-half a, .bottom-half a {
