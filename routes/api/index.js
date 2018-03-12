@@ -1,9 +1,9 @@
 const router = require('express').Router();
-const registrationRoutes = require('./registrationRoutes');
+const userRoutes = require('./userRoutes');
 const authRoutes = require('./authRoutes');
 
-// Registration Routes
-router.use('/registration', registrationRoutes);
+// User Routes
+router.use('/user', userRoutes);
 
 // Auth routes
 router.use('/auth', authRoutes);

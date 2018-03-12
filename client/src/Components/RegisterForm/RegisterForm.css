@@ -9,3 +9,8 @@
 .space {
   margin: 8rem 0;
 }
+
+.error {
+  text-align: center;
+  color: red;
+}

@@ -12,6 +12,7 @@ const expressValidator = require('express-validator');
 const errorHandlers = require('./handlers/errorHandlers');
 const routes = require('./routes');
 const morgan = require('morgan');
+const jsonwebtoken = require('jsonwebtoken');
 // require('./handlers/passport');
 
 // Create our Express app for our API Server
@@ -62,6 +63,20 @@ app.use((req, res, next) => {
 //   req.login = promisify(req.login, req);
 //   next();
 // });
+
+// JWT Authentication Middleware
+app.use((req, res, next) => {
+  if (req.headers && req.headers.authorization && req.headers.authorization.split(' ')[0] === 'JWT') {
+    jsonwebtoken.verify(req.headers.authorization.split(' ')[1], process.env.JWT_SECRET, (err, decode) => {
+      if (err) req.user = undefined;
+      req.user = decode;
+      next();
+    });
+  } else {
+    req.user = undefined;
+    next();
+  }
+});
 
 // Add routes, both API and view
 app.use(routes);
