@@ -1,14 +1,17 @@
 const router = require('express').Router();
-// const registrationController = require('../../controllers/registrationController'); // eslint-disable-line max-len
-// const { catchErrors } = require('../../handlers/errorHandlers');
+const userController = require('../../controllers/userController'); // eslint-disable-line max-len
+const { catchErrors } = require('../../handlers/errorHandlers');
 
-// Matches with /api/registration/...
+// Matches with /api/user/...
 
-// router.route('/createSiteAdmin')
-//   .post(
-//     registrationController.validateSiteAdminRegistrationData,
-//     catchErrors(registrationController.createSuper),
-//   );
+router.route('/registerUser')
+  .post(
+    // userController.validateUserRegistrationData,
+    catchErrors(userController.createUser),
+  );
+
+router.route('/signIn')
+  .post(catchErrors(userController.signIn));
 
 // router.route('/createTeamAdmin')
 //   .post(

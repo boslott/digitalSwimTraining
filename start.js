@@ -11,7 +11,7 @@ mongoose.connection.on('error', (err) => {
 });
 
 // Import all models (When we have them!)
-// require('./models/Super');
+require('./models/User');
 // require('./models/TeamAdmin');
 // require('./models/Team');
 

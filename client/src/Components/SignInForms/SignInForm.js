@@ -1,6 +1,7 @@
 // Packages
 import React, { Component } from 'react';
 import { Card, CardTitle } from 'react-materialize';
+import API from '../../utils/API';
 
 // RegisterForm CSS - no sense in repeating the style code
 import '../RegisterForm/RegisterForm.css';
@@ -21,7 +22,14 @@ class SignInForm extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    console.log(this.state);
+    API.signIn(this.state)
+      .then(user => {
+        const token = JSON.stringify(user.data);
+        console.log(token);
+        localStorage.setItem('token', token);
+
+      })
+      .catch(err => console.log(err));
     this.setState({ email: '', password: '' })
   }
 

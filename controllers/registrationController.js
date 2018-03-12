@@ -1,46 +1,46 @@
-// const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 // const multer = require('multer');
 // const jimp = require('jimp');
 // const uuid = require('uuid');
 
-// const Super = mongoose.model('Super');
+const User = mongoose.model('User');
 // const TeamAdmin = mongoose.model('TeamAdmin');
 // const Team = mongoose.model('Team');
 
-// To register a new site admin, must validate the information first
-// exports.validateSiteAdminRegistrationData = (req, res, next) => {
-//   req.sanitizeBody('name');
-//   req.checkBody('name', 'You must supply a name!').notEmpty();
-//   req.checkBody('email', 'That email is not valid!').isEmail();
-//   req.sanitizeBody('email').normalizeEmail({
-//     remove_dots: false,
-//     remove_extension: false,
-//     gmail_remove_subaddress: false,
-//   });
-//   req.checkBody('password', 'Password cannot be blank!').notEmpty();
-//   req.checkBody('password-confirm', 'Confirm Password cannot be blank!').notEmpty();
-//   req.checkBody('password-confirm', 'Oops! Your passwords do not match!').equals(req.body.password);
+// To register a new user, must validate the information first
+exports.validateUserRegistrationData = (req, res, next) => {
+  req.sanitizeBody('name');
+  req.checkBody('name', 'You must supply a name!').notEmpty();
+  req.checkBody('email', 'That email is not valid!').isEmail();
+  req.sanitizeBody('email').normalizeEmail({
+    remove_dots: false,
+    remove_extension: false,
+    gmail_remove_subaddress: false,
+  });
+  req.checkBody('password', 'Password cannot be blank!').notEmpty();
+  req.checkBody('password-confirm', 'Confirm Password cannot be blank!').notEmpty();
+  req.checkBody('password-confirm', 'Oops! Your passwords do not match!').equals(req.body.password);
 
-//   const errors = req.validationErrors();
-//   if (errors) {
-//     console.log(errors);
-//     // req.flash('error', errors.map(err => err.msg ));
-//     return;
-//   }
-//   next();
-// };
+  const errors = req.validationErrors();
+  if (errors) {
+    console.log(errors);
+    // req.flash('error', errors.map(err => err.msg ));
+    return;
+  }
+  next();
+};
 
-// exports.createSuper = async (req, res) => {
-//   console.log(req.body);
-//   const newAdmin = new Super(req.body);
+exports.createUser = async (req, res) => {
+  console.log(req.body);
+  const user = new User(req.body);
 
-//   // model.register method comes from passportLocalMongoose package
-//   await Super.register(newAdmin, req.body.password, (err) => {
-//     if (err) throw err;
-//     console.log(`${req.body.name} is now registered! 😃`);
-//     res.json(newAdmin);
-//   });
-// };
+  // model.register method comes from passportLocalMongoose package
+  // await Super.register(user, req.body.password, (err) => {
+  //   if (err) throw err;
+  //   console.log(`${req.body.name} is now registered! 😃`);
+  //   res.json(user);
+  // });
+};
 
 // exports.validateTeamAdminRegistrationData = (req, res, next) => {
 //   console.log('beginning validation');

@@ -2,18 +2,21 @@ import axios from "axios";
 
 export default {
 
-  registerSiteAdmin: function(newAdmin) {
-    // const newAdmin = {
-    //   name,
-    //   email,
-    //   password,
-    //   'password-confirm': passwordConfirm
-    // };
-    return axios.post('/api/registration/createSiteAdmin', newAdmin);
+  registerUser: function(userData) {
+    const newUser = {
+      name: userData.name,
+      email: userData.email,
+      password: userData.password
+    };
+    return axios.post('/api/user/registerUser', newUser);
   },
 
-  registerTeamAdmin: function(newAdmin) {
-    return axios.post('/api/registration/createTeamAdmin', newAdmin);
+  signIn: function(userData) {
+    const user = {
+      email: userData.email,
+      password: userData.password
+    };
+    return axios.post('/api/user/signIn', user);
   },
 
   registerCoach: function(newCoach) {
