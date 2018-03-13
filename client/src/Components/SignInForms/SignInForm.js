@@ -1,6 +1,7 @@
 // Packages
 import React, { Component } from 'react';
 import { Card, CardTitle } from 'react-materialize';
+import { Redirect } from 'react-router-dom';
 import API from '../../utils/API';
 
 // RegisterForm CSS - no sense in repeating the style code
@@ -10,7 +11,8 @@ class SignInForm extends Component {
 
   state = {
     email: '',
-    password: ''
+    password: '',
+    redirect: false
   }
 
   handleInputChange = event => {
@@ -22,18 +24,22 @@ class SignInForm extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
+    localStorage.setItem('token', '');
     API.signIn(this.state)
       .then(user => {
         const token = JSON.stringify(user.data);
-        console.log(token);
         localStorage.setItem('token', token);
-
+        this.props.auth(true);
       })
       .catch(err => console.log(err));
-    this.setState({ email: '', password: '' })
+    this.setState({ email: '', password: '', redirect: true });
+    // this.props.history.push('/');
   }
 
   render() {
+    if (this.state.redirect) {
+      return <Redirect to='/' />
+    }
     return (
       <Card title='' className='my-5'>
         <CardTitle className='card-title' image=''>SIGN IN</CardTitle>

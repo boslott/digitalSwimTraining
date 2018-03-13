@@ -27,8 +27,11 @@ exports.validateUserRegistrationData = (req, res, next) => {
   next();
 };
 
+const generateJwtToken = (user) => {
+  return { token: jwt.sign({ name: user.name, id: user._id, role: user.role }, process.env.JWT_SECRET, {expiresIn: 60 * 60 * 24})};
+}
+
 exports.createUser = async (req, res) => {
-  console.log(req.body);
   const user = new User(req.body);
   user.hashPassword = bcrypt.hashSync(req.body.password, 10);
   await user.save((err, user) => {
@@ -36,7 +39,7 @@ exports.createUser = async (req, res) => {
       return res.status(400).send({ message: err });
     }
     user.hashPassword = undefined;
-    return res.json({ token: jwt.sign({ name: user.name, id: user._id, role: user.role }, process.env.JWT_SECRET, {expiresIn: 60 * 60 * 24})});
+    return res.json(generateJwtToken(user));
   });
 };
 
@@ -49,8 +52,23 @@ exports.signIn = async (req, res) => {
       if(!user.comparePassword(req.body.password)) {
         res.status(401).json({ message: 'Authentication Failed. Wrong password.'});
       } else {
-        return res.json({ token: jwt.sign({ name: user.name, id: user._id, role: user.role }, process.env.JWT_SECRET, {expiresIn: 60 * 60 * 24})});
+        return res.json(generateJwtToken(user));
       }
     }
   });
+};
+
+exports.getUser = (req, res) => {
+  const token = req.body.token || req.query.token;
+  if(!token) {
+    return res.status(401).json({ message: 'Must pass token!' });
+  }
+  jwt.verify(token, process.env.JWT_SECRET, function (err, user) {
+    if(err) throw err;
+    User.findById((user.id), (err, user) => {
+      if(err) throw err;
+      const token = generateJwtToken(user);
+      res.json({ user, token });
+    })
+  })
 };
