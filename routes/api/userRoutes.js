@@ -13,19 +13,7 @@ router.route('/registerUser')
 router.route('/signIn')
   .post(catchErrors(userController.signIn));
 
-// router.route('/createTeamAdmin')
-//   .post(
-//     registrationController.validateTeamAdminRegistrationData,
-//     catchErrors(registrationController.createTeamAdmin),
-//   );
-
-// router.route('/createTeam')
-//   .post(
-//     registrationController.testing,
-//     registrationController.upload,
-//     catchErrors(registrationController.resize),
-//     // registrationController.validateTeamRegistrationData,
-//     catchErrors(registrationController.createTeam),
-//   );
+router.route('/getUser')
+  .post(userController.getUser);
 
 module.exports = router;

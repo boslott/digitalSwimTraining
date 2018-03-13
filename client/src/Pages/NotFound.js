@@ -5,11 +5,12 @@ import React, { Component } from 'react';
 import Nav from '../Components/Nav/Nav';
 import Footer from '../Components/Footer/Footer';
 
-class Home extends Component {
+class NotFound extends Component {
   render() {
     return (
-      <div>
-        <Nav location={this.props.location} userAuth={this.props.isAuthenticated} />
+      <div className='page'>
+        <Nav location={this.props.location}/>
+        <h1>Too Bad So Sad. You Can't Find Your Page!</h1>
         <div style={{minHeight: '50vh'}}></div>
         <Footer />
       </div>
@@ -17,4 +18,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default NotFound;

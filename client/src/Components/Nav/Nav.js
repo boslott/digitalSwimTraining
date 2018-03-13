@@ -11,6 +11,15 @@ import SignInLinks from './SignInLinks';
  
 
 class Nav extends Component {
+
+  state = {
+    userAuth: this.props.userAuth
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.setState({ userAuth: nextProps.userAuth });
+  }
+
   render() {
     return (
       <header className='container-fluid nav-whole'>
@@ -20,7 +29,11 @@ class Nav extends Component {
               <Logo logoWidth={100} />
             </div>
             <div className='col-sm-3 flex items-center'>
-              <SignInLinks location={this.props.location} />
+              <SignInLinks
+                location={this.props.location}
+                userAuth={this.state.userAuth}
+                userHasAuthenticated={this.props.userHasAuthenticated}
+              />
             </div>
           </div>
           <div className='row nav-section bottom-half d-flex justify-center'>
