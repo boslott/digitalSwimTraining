@@ -10,6 +10,7 @@ import Home from './Pages/Home';
 import Register from './Pages/Register';
 import SignIn from './Pages/SignIn';
 import Courses from './Pages/Courses';
+import CourseOverview from './Pages/CourseOverview';
 import NotFound from './Pages/NotFound';
 
 export default ({ childProps }) => (
@@ -18,6 +19,7 @@ export default ({ childProps }) => (
     <AppliedRoute exact path='/register' component={Register} props={childProps} />
     <AppliedRoute exact path='/signin' component={SignIn} props={childProps} />
     <AppliedRoute exact path='/courses' component={Courses} props={childProps} />
+    <AppliedRoute exact path='/courses/:id' component={CourseOverview} props={childProps} />
     <AppliedRoute component={NotFound} props={childProps} />
   </Switch>
 );
