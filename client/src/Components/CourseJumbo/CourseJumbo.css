@@ -1,0 +1,95 @@
+.jumbo__bg {
+  /* background: linear-gradient(to right, #F2D024, #FFF382); */
+  /* background: linear-gradient(-45deg,#00b1b3,#1d5086); */
+  background: linear-gradient(45deg, #DE751F, #FFED4A);
+  min-height: 60vh;
+  width: 100%;
+}
+
+.skill-tag {
+  margin: 2rem;
+  padding: 0.5rem 0.8rem 0rem;
+  color: #606F7B;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: #FFED4A !important;
+  display: inline-block;
+  flex: 0 1 0; 
+  box-shadow: 0.05rem 0.05rem 0.1rem #606F7B;
+}
+
+.course-title p {
+  margin: 0 2rem 1rem;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 0.05rem 0.05rem #606F7B;
+}
+
+.course-description p {
+  margin: 0 2rem 0;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  text-shadow: 0.03rem 0.03rem #606F7B;
+}
+
+@keyframes rollIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(200%,0,0) rotate3d(0,0,1,120deg);
+    transform: translate3d(200%,0,0) rotate3d(0,0,1,120deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.jumbo__img {
+  margin: 6rem 0 6rem 2rem;
+  animation-name: rollIn;
+  animation-duration: 3s;
+}
+
+.jumbo__img img {
+  border-style: solid;
+  border-width: 0.35rem;
+  border-color: #F6993F;
+  border-radius: 50%;
+  height: 20rem;
+}
+
+.jumbo__buttons-row {
+  border-style: solid;
+  border-color: #606F7B;
+  border-top-width: 0.05rem;
+  margin-top: 3rem;
+}
+
+.jumbo__button {
+  background: #2779BD;
+  padding: 0.6rem 1.5rem 0rem;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  margin: 2rem;
+  display: inline-block;
+  transition-duration: 0.4s;
+  color: #fff;
+  text-shadow: 0.05rem 0.05rem #606F7B;
+}
+
+.jumbo__button:hover {
+  cursor: pointer;
+  background: #FFED4A;
+  color: #606F7B;
+  text-shadow: 0.02rem 0.02rem #fff;
+}
+
+.jumbo__button p {
+  font-size: 1.2rem;
+}
