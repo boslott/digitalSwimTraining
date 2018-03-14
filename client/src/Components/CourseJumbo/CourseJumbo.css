@@ -51,7 +51,7 @@
 .jumbo__img {
   margin: 6rem 0 6rem 2rem;
   animation-name: rollIn;
-  animation-duration: 3s;
+  animation-duration: 2.5s;
 }
 
 .jumbo__img img {

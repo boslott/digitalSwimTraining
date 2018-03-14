@@ -1,0 +1,49 @@
+.sub-nav__bg {
+  padding: 4rem auto;
+  background: #F1F5F8;
+  border-style: solid;
+  border-color: #B8C2CC;
+  border-bottom-width: 0.1rem;
+}
+
+.sub-nav__button {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #606F7B;
+  border-style: solid;
+  border-color: #B8C2CC;
+  border-right-width: 0.05rem;
+  display: flex;
+  align-items: flex-end;
+}
+
+.sub-nav__button a {
+  color: #606F7B;
+  text-decoration: none;
+  padding-top: 1rem;
+}
+
+.sub-nav__button a:link,
+.sub-nav__button a:visited {
+  color: #606F7B;
+  text-decoration: none;
+}
+
+.sub-nav__lesson-count {
+  color: #606F7B;
+  border-style: solid;
+  border-color: #B8C2CC;
+  border-left-width: 0.05rem;
+  display: flex;
+  align-items: center;
+}
+
+.sub-nav__lesson-count p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0 0 0 0.8rem;
+}
+
+.sub-nav__lesson-play {
+  margin-left: 1rem;
+}
