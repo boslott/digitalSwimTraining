@@ -1,0 +1,68 @@
+
+.list-card__bg-lt {
+  background: #F8FAFC;
+  border-style: solid;
+  border-width: 0.06rem 0.06rem 0.03rem;
+  border-color: #8795A1;
+  margin: 0 2rem;
+}
+
+.list-card__bg-dk {
+  background: #DAE1E7;
+  border-style: solid;
+  border-width: 0.06rem 0.06rem 0.03rem;
+  border-color: #8795A1;
+  margin: 0 2rem;
+}
+
+.list-card__lesson-number {
+  background: #FFED4A;
+  color: #fff;
+  font-size: 3rem;
+  text-shadow: 0.06rem 0.06rem #8795A1;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-color: #F2D024;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+}
+
+.list-card__lesson-meta {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -1px;
+  margin: 3rem 0 0 0 !important;
+}
+
+.list-card__lesson-episode {
+  color: #8795A1;
+  margin-bottom: 0 !important;
+}
+
+.list-card__lesson-runtime {
+  color: #F6993F;
+  margin-bottom: 0 !important;
+}
+
+.list-card__lesson-title p {
+  color: #3D4852;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: -1px;
+  margin: 0 0 0 1rem;
+}
+
+.list-card__lesson-desc {
+  margin-bottom: 2rem;
+}
+
+.list-card__lesson-desc p {
+  color: #606F7B;
+  margin: 1rem 2rem 1rem 1rem;;
+}
