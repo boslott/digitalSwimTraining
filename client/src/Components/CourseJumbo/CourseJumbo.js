@@ -15,7 +15,7 @@ class CourseJumbo extends Component {
             <div className='col-sm-12 col-md-8'>
               <div className='row'>
                 <div className='skill-tag'>
-                  <p>Skill</p>
+                  <p>Freestyle</p>
                 </div>
               </div>
               <div className='row'>

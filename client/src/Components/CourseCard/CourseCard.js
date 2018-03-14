@@ -1,5 +1,6 @@
 // Packages
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 // Component CSS and images
 import './CourseCard.css';
@@ -11,7 +12,7 @@ class CourseCard extends Component {
         <div className='tile course-card__parent'>
           <div className='tile course-card__child'>
             <div className='course-card'>
-              <a href="">
+              <Link to={'/courses/' + this.props.title}>
                 <div className='course-card__thumbnail'>
                   <img src={window.location.origin + '/images/' + this.props.bgImg} alt=""/>
                 </div>
@@ -24,7 +25,7 @@ class CourseCard extends Component {
                     <p>{this.props.lessCnt} Lessons</p>
                   </div>
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
