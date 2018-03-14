@@ -13,10 +13,6 @@ class SignIn extends Component {
     userAuth: this.props.isAuthenticated
   }
 
-  // componentWillReceiveProps(nextProps) {
-  //   this.setState({ userAuth: this.nextProps.isAuthenticated });
-  // }
-
   authenticate = authenticated => {
     this.setState({ userAuth: true });
     this.props.userHasAuthenticated(true);

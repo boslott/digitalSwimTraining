@@ -7,6 +7,16 @@ import Footer from '../Components/Footer/Footer';
 import RegisterForm from '../Components/RegisterForm/RegisterForm';
 
 class Register extends Component {
+
+  state = {
+    userAuth: this.props.isAuthenticated
+  }
+
+  authenticate = authenticated => {
+    this.setState({ userAuth: true });
+    this.props.userHasAuthenticated(true);
+  }
+
   render() {
     const location = this.props.location;
     return (
