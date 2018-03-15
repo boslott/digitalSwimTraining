@@ -26,7 +26,7 @@ class ResetPassForm extends Component {
 
   render() {
     return (
-      <Card title='' className='space'>
+      <Card title='' className='space form-shadow'>
           <CardTitle className='card-title' image=''>FORGOT PASSWORD</CardTitle>
           <form>
             <div className='container mt-5'>

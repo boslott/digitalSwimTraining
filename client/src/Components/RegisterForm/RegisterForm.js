@@ -51,7 +51,7 @@ class RegisterForm extends Component {
     return (
       <div>
         {this.state.returnedName ? <h2>Hello {this.state.returnedName}!</h2> : ''}
-        <Card title='' className='my-5'>
+        <Card title='' className='my-5 form-shadow'>
           <CardTitle className='card-title' image=''>REGISTER</CardTitle>
           <form>
             <div className='container mt-5'>

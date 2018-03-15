@@ -1,3 +1,7 @@
+.form-shadow {
+  box-shadow: 0.1rem 0.1rem 0.2rem #8795A1;
+}
+
 .card-title {
   background-color: #2779BD;
   color: #fff;

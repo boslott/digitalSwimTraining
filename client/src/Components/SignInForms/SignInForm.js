@@ -41,7 +41,7 @@ class SignInForm extends Component {
       return <Redirect to='/' />
     }
     return (
-      <Card title='' className='my-5'>
+      <Card title='' className='my-5 form-shadow'>
         <CardTitle className='card-title' image=''>SIGN IN</CardTitle>
         <form>
           <div className='container mt-5'>
