@@ -1,0 +1,12 @@
+.add-comment__input-field {
+  border-style: solid;
+  border-width: 0.05rem;
+  border-color: #8795A1;
+  height: 2.5rem;
+  padding: 0.5rem;
+  border-radius: 3px;
+}
+
+.add-comment__input-field:hover {
+  border-color: #3D4852;
+}
