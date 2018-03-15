@@ -1,0 +1,25 @@
+.single__listing {
+  border-style: dashed;
+  border-bottom-width: 0.05rem;
+  border-color: #B8C2CC;
+  margin-top: 1rem;
+}
+
+.listing__lesson-number {
+  color: #DE751F;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+.listing__lesson-title {
+  color:#3D4852;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.listing__lesson-runtime {
+  color: #B8C2CC;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
