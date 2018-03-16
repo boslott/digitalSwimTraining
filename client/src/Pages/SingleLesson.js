@@ -10,13 +10,18 @@ import LessonComments from '../Components/LessonComments/LessonComments';
 import LessonListings from '../Components/LessonListings/LessonListings';
 
 class SingleLesson extends Component {
+
+  state = {
+    'courseName': 'freestyle101' 
+  }
+
   render() {
     return (
       <div className='page'>
         <Nav location={this.props.location} userAuth={this.props.isAuthenticated} />
         <div className='container-fluid player__bg bg-black'>
           <div className='container'>
-            <div className='row player-row'>
+            <div className='row player-row flex justify-center'>
               <VideoPlayer />
             </div>
           </div>
@@ -27,7 +32,7 @@ class SingleLesson extends Component {
         <div className='container'>
           <div className='row mb-5'>
             <div className='col-sm-12 col-md-8 lesson__comments border-r border-grey border-solid'>
-              <LessonComments />
+              <LessonComments disqusIdentifier={'/' + this.state.courseName} courseName={this.state.courseName} />
             </div>
             <div className='col-sm-12 col-md-4 lesson__course-listings'>
               <LessonListings />
