@@ -12,17 +12,17 @@ class CourseCard extends Component {
         <div className='tile course-card__parent'>
           <div className='tile course-card__child'>
             <div className='course-card'>
-              <Link to={'/courses/' + this.props.title}>
+              <Link to={'/courses' + this.props.course.slug}>
                 <div className='course-card__thumbnail'>
-                  <img src={window.location.origin + '/images/' + this.props.bgImg} alt=""/>
+                  <img src={this.props.course.thumbnail} alt=""/>
                 </div>
                 <div className='course-card__details'>
                   <div className='course-card__skill'>
-                    <p>{this.props.skill}</p>
+                    <p>{this.props.course.category}</p>
                   </div>
-                  <h3>{this.props.title}</h3>
+                  <h3>{this.props.course.title}</h3>
                   <div className='course-card__lesson-count'>
-                    <p>{this.props.lessCnt} Lessons</p>
+                    <p>{this.props.course.lessCnt} Lessons</p>
                   </div>
                 </div>
               </Link>

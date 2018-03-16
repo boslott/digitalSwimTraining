@@ -16,23 +16,21 @@ class CourseJumbo extends Component {
             <div className='col-sm-12 col-md-8'>
               <div className='row'>
                 <div className='skill-tag'>
-                  <p>Freestyle</p>
+                  <p>{this.props.course.category}</p>
                 </div>
               </div>
               <div className='row'>
                 <div className='course-title'>
-                  <p>Freestyle 101</p>
+                  <p>{this.props.course.title}</p>
                 </div>
               </div>
               <div className='row'>
                 <div className='course-description'>
-                  <p>Oh Freestyle. The stroke when you are <em>free</em> to do as you please. Though this may be true, there is a commonly-taught, specific technique to freestyle that is proven on a daily basis to be the most efficient way to swim through the water.</p>
-                  <p>&nbsp;</p>
-                  <p>So, go ahead and push the start button below and we will begin our journey to learning the best techniques for the most efficient freestyle stroke. As a spoiler, we will begin with a little history about ... Tarzan!?!</p>
+                  <p>{this.props.course.description}</p>
                 </div>
               </div>
               <div className='row jumbo__buttons-row'>
-                <Link to='/courses/freestyle101/episode1'>
+                <Link to={`/courses${this.props.course.slug}/episode1`}>
                   <div className='jumbo__button'>
                     <p>START</p>
                   </div>
@@ -41,7 +39,7 @@ class CourseJumbo extends Component {
             </div>
             <div className='col-sm-12 col-md-4'>
               <div className='jumbo__img'>
-                <img src={window.location.origin + '/images/Freestyler.jpg'} alt=""/>
+                <img src={this.props.course.thumbnail} alt=""/>
               </div>
             </div>
           </div>

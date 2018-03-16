@@ -12,7 +12,7 @@ mongoose.connection.on('error', (err) => {
 
 // Import all models (When we have them!)
 require('./models/User');
-// require('./models/TeamAdmin');
+require('./models/Course');
 // require('./models/Team');
 
 

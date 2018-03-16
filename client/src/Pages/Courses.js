@@ -5,36 +5,54 @@ import React, { Component } from 'react';
 import Nav from '../Components/Nav/Nav';
 import Footer from '../Components/Footer/Footer';
 import CourseCard from '../Components/CourseCard/CourseCard';
+import API from '../utils/API';
 
 class Courses extends Component {
+
+  state = {
+    courses: [],
+    isLoading: true,
+  }
+
+  componentWillMount() {
+    this.getCourses();
+  }
+
+  getCourses = async () => {
+    await API.getCourses()
+      .then(courses => {
+          let loadedCourses = [];
+          courses.data.map(course => {
+          loadedCourses.push(course);
+        });
+        this.setState({ courses: loadedCourses, isLoading: false });
+      })
+      .catch(err => console.log(err));
+  }
+
   render() {
     return (
-      <div className='page'>
+      !this.state.isLoading &&
+      <div className='page'> 
+        {this.state.courses[0] ?
+        <h5>{this.state.courses[1].title}</h5> : <h5>Oh no!</h5>
+        }
         <Nav location={this.props.location} userAuth={this.props.isAuthenticated} />
         <div className='container my-5'>
           <div className='row flex justify-around relative'>
             <CourseCard
-              bgImg='swim101.jpg' 
-              skill='General'
-              title='Swimming 101'
-              lessCnt={12}
+              course={this.state.courses[0]}
             />
             <CourseCard
-              bgImg='Freestyler.jpg'
-              skill='Freestyle'
-              title='Freestyle 101'
-              lessCnt={8}
+              course={this.state.courses[1]}
             />
             <CourseCard
-              bgImg='backstroker.jpg'
-              skill='Backstroke'
-              title='What you need to know about Backstroke'
-              lessCnt={14}
+              course={this.state.courses[2]}
             />
           </div>
         </div>
         <Footer />
-      </div>
+        </div>
     );
   }
 } 

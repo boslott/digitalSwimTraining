@@ -20,8 +20,8 @@ export default ({ childProps }) => (
     <AppliedRoute exact path='/register' component={Register} props={childProps} />
     <AppliedRoute exact path='/signin' component={SignIn} props={childProps} />
     <AppliedRoute exact path='/courses' component={Courses} props={childProps} />
-    <AppliedRoute exact path='/courses/:courseId' component={CourseOverview} props={childProps} />
-    <AppliedRoute exact path='/courses/:courseId/:episodeNum' component={SingleLesson} props={childProps} />
+    <AppliedRoute exact path='/courses/:courseSlug' component={CourseOverview} props={childProps} />
+    <AppliedRoute exact path='/courses/:courseSlug/:episodeNum' component={SingleLesson} props={childProps} />
     <AppliedRoute component={NotFound} props={childProps} />
   </Switch>
 );
