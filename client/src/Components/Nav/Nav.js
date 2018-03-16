@@ -22,55 +22,61 @@ class Nav extends Component {
 
   render() {
     return (
-      <header className='container-fluid nav-whole'>
-        <div className='container nav-inner'>
-          <div className='row nav-section top-half'>
-            <div className='col-sm-9'>
-              <Logo logoWidth={100} />
-            </div>
-            <div className='col-sm-3 flex items-center'>
-              <SignInLinks
-                location={this.props.location}
-                userAuth={this.state.userAuth}
-                userHasAuthenticated={this.props.userHasAuthenticated}
-              />
-            </div>
-          </div>
-          <div className='row nav-section bottom-half d-flex justify-center'>
-            <div className='col-sm-1'></div>
-            <div className='nav-page-link col-sm-2'>
-              <NavPageLink
-                icon='home'
-                linkText='&nbsp; HOME'
-                link='/'
-                location={this.props.location}
-              />
-            </div>
-            <div className='nav-page-link col-sm-2'>
-              <NavPageLink
-                icon='info-circle'
-                linkText='&nbsp; ABOUT'
-                link='/about'
-                location={this.props.location}
-              />
-            </div>
-            <div className='nav-page-link col-sm-2'>
-              <NavPageLink
-                icon='list-ul'
-                linkText='&nbsp; COURSES'
-                link='/courses'
-                location={this.props.location}
-              />
-            </div>
-            <div className='nav-page-link col-sm-2'>
-              <NavPageLink
-                icon='envelope'
-                linkText='&nbsp; CONTACT'
-                link='/contact'
-                location={this.props.location}
-              />
-            </div>
-            <div className='col-sm-1'></div>
+      <header>
+        <div className='container-fluid nav-upper'>
+          <div className='container nav-inner'>
+            <div className='row nav-section top-half'>
+              <div className='col-sm-9'>
+                <Logo logoWidth={100} />
+              </div>
+              <div className='col-sm-3 flex items-center'>
+                <SignInLinks
+                  location={this.props.location}
+                  userAuth={this.state.userAuth}
+                  userHasAuthenticated={this.props.userHasAuthenticated}
+                />
+              </div>
+            </div>  {/*  Close top-half row  */}
+          </div>  {/*  Close nav-inner (upper row)  */}
+        </div>  {/*  Close nav-upper  */}
+        <div className='container-fluid nav-lower'>
+          <div className='container'>
+            <nav className='row nav-section bottom-half d-flex justify-center'>
+              <div className='col-sm-1'></div>
+              <div className='nav-page-link col-sm-2'>
+                <NavPageLink
+                  icon='home'
+                  linkText='&nbsp; HOME'
+                  link='/'
+                  location={this.props.location}
+                />
+              </div>
+              <div className='nav-page-link col-sm-2'>
+                <NavPageLink
+                  icon='info-circle'
+                  linkText='&nbsp; ABOUT'
+                  link='/about'
+                  location={this.props.location}
+                />
+              </div>
+              <div className='nav-page-link col-sm-2'>
+                <NavPageLink
+                  icon='list-ul'
+                  linkText='&nbsp; COURSES'
+                  link='/courses'
+                  location={this.props.location}
+                />
+              </div>
+              <div className='nav-page-link col-sm-2'>
+                <NavPageLink
+                  icon='envelope'
+                  linkText='&nbsp; CONTACT'
+                  link='/contact'
+                  location={this.props.location}
+                />
+              </div>
+              <div className='col-sm-1'></div>
+            </nav>
           </div>
         </div>
       </header> 
