@@ -1,5 +1,6 @@
 // Packages
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 // Component CSS
 import './CourseJumbo.css';
@@ -31,9 +32,11 @@ class CourseJumbo extends Component {
                 </div>
               </div>
               <div className='row jumbo__buttons-row'>
-                <div className='jumbo__button'>
-                  <p>START</p>
-                </div>
+                <Link to='/courses/freestyle101/episode1'>
+                  <div className='jumbo__button'>
+                    <p>START</p>
+                  </div>
+                </Link>
               </div>
             </div>
             <div className='col-sm-12 col-md-4'>

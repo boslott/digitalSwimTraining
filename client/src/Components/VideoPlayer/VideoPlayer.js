@@ -1,6 +1,5 @@
 // Packages
 import React, { Component } from 'react';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 
 // Component CSS
 import './VideoPlayer.css';
@@ -8,9 +7,7 @@ import './VideoPlayer.css';
 class VideoPlayer extends Component {
   render() {
     return (
-      <div className='video-player flex justify-center'>
-        <FontAwesomeIcon icon='play-circle' size='4x' />
-      </div>
+      <iframe title='video-player' className='player' src='https://player.vimeo.com/video/24993984' width='1280' height='720' frameborder='1' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     );
   }
 }
