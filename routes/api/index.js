@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const userRoutes = require('./userRoutes');
 const authRoutes = require('./authRoutes');
+const dataRoutes = require('./dataRoutes');
 
 // User Routes
 router.use('/user', userRoutes);
@@ -8,8 +9,8 @@ router.use('/user', userRoutes);
 // Auth routes
 router.use('/auth', authRoutes);
 
-// Pool routes
-// router.use('/pool', poolRoutes);
+// Data routes
+router.use('/data', dataRoutes);
 
 // Chore routes
 // router.use('/chore', choreRoutes);

@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios';
 
 export default {
 
@@ -26,6 +26,14 @@ export default {
   getUser: function(tokenData) {
     const token = JSON.parse(tokenData);
     return axios.post('/api/user/getUser', token);
+  },
+
+  getCourses: function() {
+    return axios.get('/api/data/getCourses');
+  },
+
+  getCourse: function(slug) {
+    return axios.get('/api/data/getCourse/' + slug);
   },
 
   // Gets the book with the given id

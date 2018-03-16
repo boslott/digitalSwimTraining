@@ -21,7 +21,7 @@ class CourseJumboSubNav extends Component {
               <div className='sub-nav__lesson-play'>
                 <FontAwesomeIcon icon='play-circle' size='lg'/>
               </div>
-              <p>12 Lessons</p>
+              <p>{this.props.lessCnt} Lessons</p>
               {/* </div> */}
             </div>
           </div>
