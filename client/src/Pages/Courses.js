@@ -34,9 +34,6 @@ class Courses extends Component {
     return (
       !this.state.isLoading &&
       <div className='page'> 
-        {this.state.courses[0] ?
-        <h5>{this.state.courses[1].title}</h5> : <h5>Oh no!</h5>
-        }
         <Nav location={this.props.location} userAuth={this.props.isAuthenticated} />
         <div className='container my-5'>
           <div className='row flex justify-around relative'>
