@@ -3,7 +3,7 @@
   "description": "This is a quick and dirty description of the Freestyle 101 course. It is about Freestyle.",
   "category": "freestyle",
   "thumbnail": "https://i.imgur.com/CWwVf60.jpg",
-  "slug": "/freestyle101",
+  "slug": "freestyle101",
   "totalLessons": 8,
   "publishedOn": "March 14, 2018"
 },{
@@ -11,7 +11,7 @@
   "description": "This course is about the fundamentals of competitive swimming.",
   "category": "general",
   "thumbnail": "https://i.imgur.com/1TqHoH0.jpg",
-  "slug": "/swimming101",
+  "slug": "swimming101",
   "totalLessons": 12,
   "publishedOn": "March 14, 2018"
 },{
@@ -19,7 +19,7 @@
   "description": "This course will show you the simple steps you can take towards having a super fast and efficient backstroke.",
   "category": "backstroke",
   "thumbnail": "https://i.imgur.com/EaipDmz.jpg",
-  "slug": "/the-nitty-gritty-of-backstroke",
+  "slug": "the-nitty-gritty-of-backstroke",
   "totalLessons": 9,
   "publishedOn": "March 15, 2018"
 }]

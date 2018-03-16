@@ -11,7 +11,7 @@ exports.getCourses = (req, res) => {
 };
 
 exports.getCourse = (req, res) => {
-  Course.findOne({ slug: `/${req.params.courseSlug}` }, (err, doc) => {
+  Course.findOne({ slug: req.params.courseSlug }, (err, doc) => {
     if (!err) {
       res.json(doc);
     } else { throw err; }
