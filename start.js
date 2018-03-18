@@ -13,7 +13,7 @@ mongoose.connection.on('error', (err) => {
 // Import all models (When we have them!)
 require('./models/User');
 require('./models/Course');
-// require('./models/Team');
+require('./models/Lesson');
 
 
 // Start our API server

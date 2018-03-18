@@ -58,6 +58,17 @@
   margin: 0 0 0 1rem;
 }
 
+.list-card__lesson-title a:link,
+.list-card__lesson-title a:visited {
+  color: #3D4852;
+  text-decoration: none;
+}
+.list-card__lesson-title a p:hover,
+.list-card__lesson-title a p:active {
+  color: #DE751F !important;
+  text-decoration: none;
+}
+
 .list-card__lesson-desc {
   margin-bottom: 2rem;
 }

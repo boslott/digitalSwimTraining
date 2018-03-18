@@ -22,9 +22,9 @@ class Courses extends Component {
     await API.getCourses()
       .then(courses => {
           let loadedCourses = [];
-          courses.data.map(course => {
-          loadedCourses.push(course);
-        });
+          courses.data.map(course => (
+          loadedCourses.push(course)
+        ));
         this.setState({ courses: loadedCourses, isLoading: false });
       })
       .catch(err => console.log(err));

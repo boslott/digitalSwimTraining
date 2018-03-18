@@ -11,9 +11,11 @@ exports.getCourses = (req, res) => {
 };
 
 exports.getCourse = (req, res) => {
-  Course.findOne({ slug: req.params.courseSlug }, (err, doc) => {
-    if (!err) {
-      res.json(doc);
-    } else { throw err; }
-  });
+  Course.findOne({ slug: req.params.courseSlug })
+    .populate('lessons')
+    .exec((err, doc) => {
+      if (!err) {
+        res.json(doc);
+      } else { throw err; }
+    });
 };
