@@ -1,5 +1,6 @@
 // Packages
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 // Component CSS
 import './LessonsListCard.css';
@@ -11,23 +12,22 @@ class LessonsListCard extends Component {
         <div className='row'>
           <div className='col-sm-3 col-md-2 flex items-center'>
             <div className='list-card__lesson-number'>
-              <p>01</p>
+              <p>{this.props.lesson.episodeNum}</p>
             </div>
           </div>
           <div className='col-sm-9 col-md-10'>
             <div className='row list-card__lesson-meta'>
-              <p className='list-card__lesson-episode'>Episode 1&nbsp; . &nbsp;</p>
-              <p className='list-card__lesson-runtime'>Runtime 12:46</p>
+              <p className='list-card__lesson-episode'>Episode {this.props.lesson.episodeNum} &nbsp; . &nbsp;</p>
+              <p className='list-card__lesson-runtime'>Runtime {this.props.lesson.runtime}</p>
             </div>
             <div className='row list-card__lesson-title'>
-              <p>The Four Parts To The Freestyle Pull</p>
+              <Link to={`/courses/${this.props.lesson.associatedCourseSlug}/episode${this.props.lesson.episodeNum}`}>
+                <p>{this.props.lesson.title}</p>
+              </Link>
             </div>
             <div className='row list-card__lesson-desc'>
               <p>
-                Lorem ipsum dolor sit amet, est hac nunc morbi mauris, imperdiet donec tempus duis sed, pede sit, vel metus rhoncus turpis. Non mauris sapiente quis. Volutpat sed. Inceptos sit hac, id accumsan neque vehicula eu, velit mi eget id vehicula, dolor proin proin blandit.
-              </p>
-              <p>
-                Mauris nunc magna, nullam condimentum. Dolor arcu ullamcorper tellus sed risus quisque. Phasellus arcu diam sed mattis cupidatat, egestas risus, luctus curae imperdiet tincidunt, eleifend vel maecenas omnis culpa ut amet, sodales suscipit congue luctus mauris.
+                {this.props.lesson.description}
               </p>
             </div>
           </div>

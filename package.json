@@ -59,7 +59,9 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "loadSeed": "yarn blowitallaway && node ./data/load-data.js",
-    "blowitallaway": "node ./data/load-data.js --delete"
+    "blowitallaway": "node ./data/load-data.js --delete",
+    "loadLessons": "yarn blowitallawayLessons && node ./data/load-data_freestyle101-lessons.js",
+    "blowitallawayLessons": "node ./data/load-data_freestyle101-lessons.js --delete"
   },
   "engines": {
     "node": "^9.5.0"

@@ -13,6 +13,7 @@ class Course extends Component {
 
   state = {
     course: {},
+    lessons: [{}],
     isLoading: true,
   }
 
@@ -22,7 +23,7 @@ class Course extends Component {
 
   getCourse = () => {
     API.getCourse(this.props.match.params.courseSlug)
-      .then(course => this.setState({ course: course.data, isLoading: false }))
+      .then(course => this.setState({ course: course.data, lessons: course.data.lessons, isLoading: false }))
       .catch(err => console.log(err));
   }
 
@@ -33,7 +34,7 @@ class Course extends Component {
         <Nav location={this.props.location} userAuth={this.props.isAuthenticated} />
         <CourseJumbo course={this.state.course} />
         <CourseJumboSubNav lessCnt={this.state.course.totalLessons} />
-        <CourseLessonsList />
+        <CourseLessonsList lessons={this.state.lessons} />
         <Footer />
       </div>
     );
