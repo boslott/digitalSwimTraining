@@ -1,5 +1,6 @@
 // Packages
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 // Component CSS
 import './LessonJumbo.css';
@@ -11,25 +12,25 @@ class LessonJumbo extends Component {
         <div className='row pt-5'>
           <div className='col-sm-12 col-md-6'>
             <div className='row lesson-jumbo__published'>
-              <p>Published on March 14, 2018</p>
+              <p>Published on {this.props.lesson.publishedOn}</p>
             </div>
             <div className='row lesson-jumbo__title'>
               <p>
                 <span className='lesson-jumbo__title-course'>
-                  Freestyle 101: &nbsp;
+                  {this.props.course.title}: &nbsp;
                 </span>
                 <span className='lesson-jumbo__title-title'>
-                  The Four Parts To The Freestyle Pull
+                  {this.props.lesson.title}
                 </span>
               </p>
             </div>
             <div className='row lesson-jumbo__episode'>
               <p>
                 <span className='lesson-jumbo__episode-number'>
-                  Episode 1 &nbsp; . &nbsp;
+                  Episode {this.props.lesson.episodeNum} &nbsp; . &nbsp;
                 </span>
                 <span className='lesson-jumbo__episode-runtime'>
-                  Runtime 12:46
+                  Runtime {this.props.lesson.runtime}
                 </span>
                 </p>
             </div>
@@ -37,14 +38,24 @@ class LessonJumbo extends Component {
           <div className='col-sm-12 col-md-6'>
             <div className='row lesson-jumbo__description'>
               <p>
-                Morbo can't understand his teleprompter because he forgot how you say that letter that's shaped like a man wearing a hat. I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope?
-              </p>
-              <p>
-                You know, I was God once. It's just like the story of the grasshopper and the octopus. All year long, the grasshopper kept burying acorns for winter, while the octopus mooched off his girlfriend and watched TV. But then the winter came, and the grasshopper died, and the octopus ate all his acorns. Also he got a race car. Is any of this getting through to you?
+                {this.props.lesson.description}
               </p>
             </div>
-            <div className='row lesson-jumbo__next-button'>
-              <p>Next <span>→</span></p>
+            <div className='row next-prev-buttons'>
+              <div className='lesson-jumbo__prev-button'>
+                {this.props.lesson.episodeNum > 1 ?
+                  <Link to={`/courses/${this.props.lesson.associatedCourseSlug}/episode${this.props.lesson.episodeNum - 1}`} >
+                    <p><span>←</span>&nbsp; Prev</p>
+                  </Link> : '' 
+                }
+              </div>
+              <div className='lesson-jumbo__next-button'>
+                {this.props.lesson.episodeNum < this.props.course.totalLessons ?
+                  <Link to={`/courses/${this.props.lesson.associatedCourseSlug}/episode${this.props.lesson.episodeNum + 1}`} >
+                    <p>Next <span>→</span></p>
+                  </Link> : '' 
+                }
+              </div>
             </div>
           </div>
         </div>

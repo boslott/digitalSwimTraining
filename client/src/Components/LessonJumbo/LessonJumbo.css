@@ -49,6 +49,11 @@
   padding: 2rem 0.5rem 0.5rem;
 }
 
+.next-prev-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
 .lesson-jumbo__next-button {
   display: flex;
   justify-content: flex-end;
@@ -69,6 +74,29 @@
 }
 
 .lesson-jumbo__next-button p span {
+  color: #DE751F;
+  font-weight: 500;
+}
+/* .lesson-jumbo__prev-button {
+  display: flex;
+  justify-content: flex-start;
+} */
+
+.lesson-jumbo__prev-button p {
+  padding: 0.4rem 1rem;
+  margin-right: 2rem;
+  border-style: solid;
+  border-width: 0.03rem;
+  border-color: #B8C2CC;
+  color: #3D4852;
+  cursor: pointer;
+}
+
+.lesson-jumbo__prev-button p:hover {
+  border-color: #8795A1; 
+}
+
+.lesson-jumbo__prev-button p span {
   color: #DE751F;
   font-weight: 500;
 }
