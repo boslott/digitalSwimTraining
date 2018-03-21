@@ -9,16 +9,15 @@ import SingleListing from '../SingleListing/SingleListing';
 
 class LessonListings extends Component {
   render() {
+    const listing = this.props.course.lessons.map(lesson => (
+      <SingleListing lesson={lesson} />
+    ))
     return (
       <div className='container lesson-listings'>
         <div className='row listings__course-title'>
-          <p>Freestyle 101</p>
+          <p>{this.props.course.title}</p>
         </div>
-        <SingleListing lessNum='01'/>
-        <SingleListing lessNum='02'/>
-        <SingleListing lessNum='03'/>
-        <SingleListing lessNum='04'/>
-        <SingleListing lessNum='05'/>
+        {listing}
       </div>
     );
   }
