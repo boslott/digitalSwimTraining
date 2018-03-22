@@ -1,0 +1,19 @@
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.outer {
+  border-style: solid;
+  border-width: 0.2rem;
+  border-color: #606F7B;
+  padding: 5rem;
+  margin: 5rem;
+}
+
+.outer img {
+  border-radius: 50%;
+  width: 18rem;
+  height: 15rem;
+  margin-right: 2rem;
+}
