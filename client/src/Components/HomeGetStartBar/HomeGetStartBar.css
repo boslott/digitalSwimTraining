@@ -1,0 +1,50 @@
+.get-start__bar {
+  padding: 2rem;
+}
+
+.get-start__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.get-start__text p {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #DE751F;
+}
+
+.get-start__buttons-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .get-start__button {
+  margin: 1rem;
+  padding: 0.5rem 2rem;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-color: #DE751F;
+} */
+
+.get-start__button p {
+  padding: 0.4rem 1rem;
+  margin-right: 2rem;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-color: #DE751F;
+  color: #3D4852;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.get-start__button p:hover {
+  border-color: #2779BD; 
+}
+
+.get-start__buttons-row a:hover {
+  text-decoration: none;
+}
+
+
