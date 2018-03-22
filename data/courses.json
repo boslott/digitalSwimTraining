@@ -1,11 +1,157 @@
 [{
   "title": "Freestyle 101",
-  "description": "This is a quick and dirty description of the Freestyle 101 course. It is about Freestyle.",
+  "description": "During freestyle events, you are allowed to swim any way you choose. There is, however, a technique that is most effecient and effective. This course will teach you the fundamentals of the freestyle technique, along with the drills you need to use to improve your technique. Also included are the workouts already written for you so all you need to do is show up and practice and you will have a better, faster, and easier freestyle in no time!",
   "category": "freestyle",
   "thumbnail": "https://i.imgur.com/CWwVf60.jpg",
   "slug": "freestyle101",
   "totalLessons": 8,
-  "publishedOn": "March 14, 2018"
+  "publishedOn": "March 14, 2018",
+  "lessons": [
+    {
+        "_id": {
+            "$oid": "5ab3298b5000f201955889e8"
+        },
+        "title": "Introduction",
+        "runtime": "5:06",
+        "description": "Freestyle can be the most versatile stroke because you are allowed to do anything you want. There is, however, a most efficient technique to use to fly through the water using the least amount of energy.\nThis lesson will introduce the series and give you an overview of the course.",
+        "publishedOn": {
+            "$date": "2018-03-15T00:00:00.000Z"
+        },
+        "episodeNum": 1,
+        "videoURL": "https://player.vimeo.com/video/157230931?title=0&byline=0&portrait=0",
+        "associatedCourseId": {
+            "$oid": "5aab374d37e8e20a3719c130"
+        },
+        "associatedCourseTitle": "freestyle101",
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "5ab3298b5000f201955889e9"
+        },
+        "title": "The 4 parts to freestyle",
+        "runtime": "9:43",
+        "description": "Freestyle can be the most versatile stroke because you are allowed to do anything you want. There is, however, a most efficient technique to use to fly through the water using the least amount of energy.\nThis lesson will discuss the four parts of the freestyle technique.",
+        "publishedOn": {
+            "$date": "2018-03-15T00:00:00.000Z"
+        },
+        "episodeNum": 2,
+        "videoURL": "https://player.vimeo.com/video/171491248?title=0&byline=0&portrait=0",
+        "associatedCourseId": {
+            "$oid": "5aab374d37e8e20a3719c130"
+        },
+        "associatedCourseTitle": "freestyle101",
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "5ab3298b5000f201955889ea"
+        },
+        "title": "Freestyle Body Balance",
+        "runtime": "6:23",
+        "description": "Freestyle can be the most versatile stroke because you are allowed to do anything you want. There is, however, a most efficient technique to use to fly through the water using the least amount of energy.\nThis lesson will discuss the importance of body balance.",
+        "publishedOn": {
+            "$date": "2018-03-15T00:00:00.000Z"
+        },
+        "episodeNum": 3,
+        "videoURL": "https://player.vimeo.com/video/103487539",
+        "associatedCourseId": {
+            "$oid": "5aab374d37e8e20a3719c130"
+        },
+        "associatedCourseTitle": "freestyle101",
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "5ab3298b5000f201955889eb"
+        },
+        "title": "The 4 Parts Of The Freestyle Pull",
+        "runtime": "8:22",
+        "description": "Freestyle can be the most versatile stroke because you are allowed to do anything you want. There is, however, a most efficient technique to use to fly through the water using the least amount of energy.\nThis lesson will discuss the four parts of the freestyle pull.",
+        "publishedOn": {
+            "$date": "2018-03-15T00:00:00.000Z"
+        },
+        "episodeNum": 4,
+        "videoURL": "https://player.vimeo.com/video/137808583?title=0&byline=0&portrait=0",
+        "associatedCourseId": {
+            "$oid": "5aab374d37e8e20a3719c130"
+        },
+        "associatedCourseTitle": "freestyle101",
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "5ab3298b5000f201955889ec"
+        },
+        "title": "Freestyle Drills",
+        "runtime": "18:34",
+        "description": "Freestyle can be the most versatile stroke because you are allowed to do anything you want. There is, however, a most efficient technique to use to fly through the water using the least amount of energy.\nThis lesson will discuss several must-have freestyle drills to work on.",
+        "publishedOn": {
+            "$date": "2018-03-15T00:00:00.000Z"
+        },
+        "episodeNum": 5,
+        "videoURL": "https://player.vimeo.com/video/48036517",
+        "associatedCourseId": {
+            "$oid": "5aab374d37e8e20a3719c130"
+        },
+        "associatedCourseTitle": "freestyle101",
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "5ab3298b5000f201955889ed"
+        },
+        "title": "Freestyle Training Equipment",
+        "runtime": "8:48",
+        "description": "Freestyle can be the most versatile stroke because you are allowed to do anything you want. There is, however, a most efficient technique to use to fly through the water using the least amount of energy.\nThis lesson will discuss various equipment to train with to improve your freestyle technique.",
+        "publishedOn": {
+            "$date": "2018-03-15T00:00:00.000Z"
+        },
+        "episodeNum": 6,
+        "videoURL": "https://player.vimeo.com/video/45626863?color=ffffff&title=0&byline=0&portrait=0",
+        "associatedCourseId": {
+            "$oid": "5aab374d37e8e20a3719c130"
+        },
+        "associatedCourseTitle": "freestyle101",
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "5ab3298b5000f201955889ee"
+        },
+        "title": "Freestyle Racing Strategies",
+        "runtime": "9:08",
+        "description": "Freestyle can be the most versatile stroke because you are allowed to do anything you want. There is, however, a most efficient technique to use to fly through the water using the least amount of energy.\nThis lesson will discuss racing strategies for the different freestyle events.",
+        "publishedOn": {
+            "$date": "2018-03-15T00:00:00.000Z"
+        },
+        "episodeNum": 7,
+        "videoURL": "https://player.vimeo.com/video/106134179?color=ff0000",
+        "associatedCourseId": {
+            "$oid": "5aab374d37e8e20a3719c130"
+        },
+        "associatedCourseTitle": "freestyle101",
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "5ab3298b5000f201955889ef"
+        },
+        "title": "Freestyle Training Plan and Workouts",
+        "runtime": "14:32",
+        "description": "Freestyle can be the most versatile stroke because you are allowed to do anything you want. There is, however, a most efficient technique to use to fly through the water using the least amount of energy.\nThis lesson will discuss creating a training plan to improve your freestyle and show you the workouts to complete.",
+        "publishedOn": {
+            "$date": "2018-03-15T00:00:00.000Z"
+        },
+        "episodeNum": 8,
+        "videoURL": "https://player.vimeo.com/video/108267111?portrait=0",
+        "associatedCourseId": {
+            "$oid": "5aab374d37e8e20a3719c130"
+        },
+        "associatedCourseTitle": "freestyle101",
+        "__v": 0
+    }
+]
 },{
   "title": "Swimming 101",
   "description": "This course is about the fundamentals of competitive swimming.",

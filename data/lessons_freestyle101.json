@@ -6,7 +6,10 @@
   "episodeNum": 1,
   "videoURL": "https://player.vimeo.com/video/157230931?title=0&byline=0&portrait=0",
   "associatedCourseId": "5aab374d37e8e20a3719c130",
-  "associatedCourseTitle": "freestyle101"
+  "associatedCourseTitle": "freestyle101",
+  "_id": {
+    "$oid": "f10101"
+  }
 }, {
   "title": "The 4 parts to freestyle",
   "runtime": "9:43",
@@ -15,7 +18,10 @@
   "episodeNum": 2,
   "videoURL": "https://player.vimeo.com/video/171491248?title=0&byline=0&portrait=0",
   "associatedCourseId": "5aab374d37e8e20a3719c130",
-  "associatedCourseTitle": "freestyle101"
+  "associatedCourseTitle": "freestyle101",
+  "_id": {
+    "$oid": "f10102"
+  }
 }, {
   "title": "Freestyle Body Balance",
   "runtime": "6:23",
@@ -24,7 +30,10 @@
   "episodeNum": 3,
   "videoURL": "https://player.vimeo.com/video/103487539",
   "associatedCourseId": "5aab374d37e8e20a3719c130",
-  "associatedCourseTitle": "freestyle101"
+  "associatedCourseTitle": "freestyle101",
+  "_id": {
+    "$oid": "f10103"
+  }
 }, {
   "title": "The 4 Parts Of The Freestyle Pull",
   "runtime": "8:22",
@@ -33,7 +42,10 @@
   "episodeNum": 4,
   "videoURL": "https://player.vimeo.com/video/137808583?title=0&byline=0&portrait=0",
   "associatedCourseId": "5aab374d37e8e20a3719c130",
-  "associatedCourseTitle": "freestyle101"
+  "associatedCourseTitle": "freestyle101",
+  "_id": {
+    "$oid": "f10104"
+  }
 }, {
   "title": "Freestyle Drills",
   "runtime": "18:34",
@@ -42,7 +54,10 @@
   "episodeNum": 5,
   "videoURL": "https://player.vimeo.com/video/48036517",
   "associatedCourseId": "5aab374d37e8e20a3719c130",
-  "associatedCourseTitle": "freestyle101"
+  "associatedCourseTitle": "freestyle101",
+  "_id": {
+    "$oid": "f10105"
+  }
 }, {
   "title": "Freestyle Training Equipment",
   "runtime": "8:48",
@@ -51,7 +66,10 @@
   "episodeNum": 6,
   "videoURL": "https://player.vimeo.com/video/45626863?color=ffffff&title=0&byline=0&portrait=0",
   "associatedCourseId": "5aab374d37e8e20a3719c130",
-  "associatedCourseTitle": "freestyle101"
+  "associatedCourseTitle": "freestyle101",
+  "_id": {
+    "$oid": "f10106"
+  }
 }, {
   "title": "Freestyle Racing Strategies",
   "runtime": "9:08",
@@ -60,7 +78,10 @@
   "episodeNum": 7,
   "videoURL": "https://player.vimeo.com/video/106134179?color=ff0000",
   "associatedCourseId": "5aab374d37e8e20a3719c130",
-  "associatedCourseTitle": "freestyle101"
+  "associatedCourseTitle": "freestyle101",
+  "_id": {
+    "$oid": "f10107"
+  }
 }, {
   "title": "Freestyle Training Plan and Workouts",
   "runtime": "14:32",
@@ -69,5 +90,8 @@
   "episodeNum": 8,
   "videoURL": "https://player.vimeo.com/video/108267111?portrait=0",
   "associatedCourseId": "5aab374d37e8e20a3719c130",
-  "associatedCourseTitle": "freestyle101"
+  "associatedCourseTitle": "freestyle101",
+  "_id": {
+    "$oid": "f10108"
+  }
 }]
