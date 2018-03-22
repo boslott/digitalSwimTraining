@@ -35,10 +35,9 @@ const lessonSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Course',
   },
-  associatedCourseSlug: {
+  associatedCourseTitle: {
     type: String,
     trim: true,
-    required: 'Please supply the title of the associated course for this lesson',
   },
 });
 

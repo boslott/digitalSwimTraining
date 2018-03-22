@@ -1,12 +1,11 @@
 // Packages
 import React, { Component } from 'react';
-import {  bindActionCreators } from 'redux';
+import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 // Components
 import Routes from './Routes';
-import API from './utils/API';
 import { getCourses } from './actions';
 
 class App extends Component {

@@ -12,7 +12,7 @@ class SingleListing extends Component {
         <div className='col-sm-2 listing__lesson-number'>
           <p>{this.props.lesson.episodeNum}</p>
         </div>
-        <Link to={`/courses/${this.props.lesson.associatedCourseSlug}/episode${this.props.lesson.episodeNum}`} >
+        <Link to={`/courses/${this.props.index}/${this.props.lesson.associatedCourseSlug}/episode${this.props.lesson.episodeNum}`} >
           <div className='col-sm-8 listing__lesson-title'>
             <p>{this.props.lesson.title}</p>
           </div>

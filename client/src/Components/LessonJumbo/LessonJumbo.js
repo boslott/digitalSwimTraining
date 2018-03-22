@@ -1,18 +1,20 @@
 // Packages
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import moment from 'moment';
 
 // Component CSS
 import './LessonJumbo.css';
 
 class LessonJumbo extends Component {
   render() {
+    let pub = moment(this.props.lesson.publishedOn).format('MMM Do YYYY');
     return (
       <div className='container lesson-jumbo'>
         <div className='row pt-5'>
           <div className='col-sm-12 col-md-6'>
             <div className='row lesson-jumbo__published'>
-              <p>Published on {this.props.lesson.publishedOn}</p>
+              <p>Published on {pub}</p>
             </div>
             <div className='row lesson-jumbo__title'>
               <p>
@@ -44,14 +46,14 @@ class LessonJumbo extends Component {
             <div className='row next-prev-buttons'>
               <div className='lesson-jumbo__prev-button'>
                 {this.props.lesson.episodeNum > 1 ?
-                  <Link to={`/courses/${this.props.lesson.associatedCourseSlug}/episode${this.props.lesson.episodeNum - 1}`} >
+                  <Link to={`/courses/${this.props.index}/${this.props.lesson.associatedCourseSlug}/episode${this.props.lesson.episodeNum - 1}`} >
                     <p><span>←</span>&nbsp; Prev</p>
                   </Link> : '' 
                 }
               </div>
               <div className='lesson-jumbo__next-button'>
                 {this.props.lesson.episodeNum < this.props.course.totalLessons ?
-                  <Link to={`/courses/${this.props.lesson.associatedCourseSlug}/episode${this.props.lesson.episodeNum + 1}`} >
+                  <Link to={`/courses/${this.props.index}/${this.props.lesson.associatedCourseSlug}/episode${this.props.lesson.episodeNum + 1}`} >
                     <p>Next <span>→</span></p>
                   </Link> : '' 
                 }
