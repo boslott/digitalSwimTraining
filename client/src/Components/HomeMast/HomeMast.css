@@ -1,0 +1,41 @@
+.home-mast {
+  background: url('/images/freestyler-female.jpg');
+  background-position: center;
+  background-size: cover;
+  min-height: 80vh;
+  position: relative;
+}
+
+.mast-next {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  height: 50%;
+  margin-bottom: 3rem;
+}
+
+.mast__title {
+  display: flex;
+  justify-content: center;
+}
+
+.mast__title p {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #3490DC;
+  margin: 3rem 0;
+  text-shadow: 0.03rem 0.03rem  #FFED4A;
+}
+
+.mast__tagline {
+  display: flex;
+  justify-content: center;
+  padding-left: 2rem;
+}
+
+.mast__tagline p {
+  font-size: 3rem;
+  font-weight: 550;
+  color: #fff;
+  text-shadow: 0.05rem 0.05rem #3D4852;
+}
