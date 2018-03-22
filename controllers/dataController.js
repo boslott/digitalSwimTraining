@@ -3,13 +3,11 @@ const mongoose = require('mongoose');
 const Course = mongoose.model('Course');
 
 exports.getCourses = (req, res) => {
-  Course.find({})
-    // .populate('lessons')
-    .exec((err, docs) => {
-      if (!err) {
-        res.json(docs);
-      } else { throw err; }
-    });
+  Course.find({}, (err, docs) => {
+    if (!err) {
+      res.json(docs);
+    } else { throw err; }
+  });
 };
 
 exports.getCourse = (req, res) => {
