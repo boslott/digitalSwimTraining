@@ -13,10 +13,24 @@ class CourseLessonsList extends Component {
     const list = this.props.lessons.map(lesson => {
       if (cnt % 2 !== 0) {
         cnt++;
-        return <LessonsListCard key={lesson.episodeNum} bgShade='lt' lesson={lesson} />
+        return (
+          <LessonsListCard
+            key={lesson.episodeNum}
+            bgShade='lt'
+            lesson={lesson}
+            index={this.props.index}
+          />
+        )
       } else {
         cnt++;
-        return <LessonsListCard key={lesson.episodeNum} bgShade='dk' lesson={lesson} />
+        return (
+          <LessonsListCard
+            key={lesson.episodeNum}
+            bgShade='dk'
+            lesson={lesson}
+            index={this.props.index}
+          />
+        )
       }
     });
     return (

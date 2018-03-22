@@ -9,8 +9,8 @@ import SingleListing from '../SingleListing/SingleListing';
 
 class LessonListings extends Component {
   render() {
-    const listing = this.props.course.lessons.map(lesson => (
-      <SingleListing lesson={lesson} />
+    const listing = this.props.course.lessons.map((lesson, index) => (
+      <SingleListing key={index} lesson={lesson} index={this.props.index}  />
     ))
     return (
       <div className='container lesson-listings'>

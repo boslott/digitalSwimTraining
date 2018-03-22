@@ -1,5 +1,6 @@
 // Packages
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 // Components
 import Nav from '../Components/Nav/Nav';
@@ -8,93 +9,36 @@ import VideoPlayer from '../Components/VideoPlayer/VideoPlayer';
 import LessonJumbo from '../Components/LessonJumbo/LessonJumbo';
 import LessonComments from '../Components/LessonComments/LessonComments';
 import LessonListings from '../Components/LessonListings/LessonListings';
-import API from '../utils/API';
 
 class SingleLesson extends Component {
-
-  state = {
-    course: {},
-    currentLesson: {},
-    currentPath: '',
-    isLoading: true 
-  }
-
-  componentWillMount() {
-    this.getPath();
-  }
-
-  componentWillUpdate() {
-    this.getPath();
-  }
-
-  getPath = () => {
-    if (this.props.location) {
-      console.log('found location');
-      console.log('location: ', this.props.location.pathname);
-      console.log('statepath: ', this.state.currentPath);
-      if (!this.state.currentPath.endsWith(this.props.match.params.episodeNum.substr(7) - 1)) {
-        // this.getCourse();
-      }
-      if (this.props.location.pathname !== this.state.currentPath) {
-        this.getCourse();
-        // this.setState({ currentPath: this.props.location.pathname });
-      }
-    }
-  }
-
-  getCourse = () => {
-    API.getCourse(this.props.match.params.courseSlug)
-      .then(course => {
-        let episode = this.props.match.params.episodeNum.substr(7) - 1;
-        if (this.state.course.title !== null) {
-          this.setState({
-            course: course.data,
-            isLoading: false
-          });
-        }
-        this.setState({
-          currentPath: this.props.location.pathname,
-          currentLesson: course.data.lessons[episode],
-        });
-        // this.getLesson();
-      })
-      .catch(err => console.log(err));
-  }
-
-  getLesson = () => {
-    if (this.state.currentLesson !== this.state.course.lessons[this.props.match.params.episodeNum.substr(7) - 1]) {
-      this.setState({
-        currentLesson: this.state.course.lessons[this.props.match.params.episodeNum.substr(7) - 1]
-      });
-    }
-  }
-
-
   render() {
+    let currentCourse = this.props.currentCourse;
+    let lessonNum = this.props.match.params.episodeNum.substr(7) - 1;
     return (
-      !this.state.isLoading &&
+      // !this.state.isLoading &&
       <div className='page'>
         <Nav location={this.props.location} userAuth={this.props.isAuthenticated} />
         <div className='container-fluid player__bg bg-black'>
           <div className='container'>
             <div className='row player-row flex justify-center'>
-              <VideoPlayer lesson={this.state.currentLesson} />
+              <VideoPlayer lesson={currentCourse.lessons[lessonNum]} />
             </div>
           </div>
         </div>
         <div className='container-fluid lesson__jumbo'>
           <LessonJumbo
-            lesson={this.state.currentLesson}
-            course={this.state.course}
+            lesson={currentCourse.lessons[lessonNum]}
+            course={currentCourse}
+            index={this.props.match.params.index}
           />
         </div>
         <div className='container'>
           <div className='row mb-5'>
             <div className='col-sm-12 col-md-8 lesson__comments border-r border-grey border-solid'>
-              <LessonComments disqusIdentifier={'/' + this.state.courseName} courseName={this.state.course.title} />
+              <LessonComments disqusIdentifier={'/' + currentCourse.title} courseName={currentCourse.title} />
             </div>
             <div className='col-sm-12 col-md-4 lesson__course-listings'>
-              <LessonListings course={this.state.course} />
+              <LessonListings course={currentCourse} index={this.props.match.params.index} />
             </div>
           </div>
         </div>
@@ -104,4 +48,8 @@ class SingleLesson extends Component {
   }
 }
 
-export default SingleLesson;
+const mapStateToProps = state => ({
+  currentCourse: state.courses.currentCourse,
+});
+
+export default connect(mapStateToProps, null)(SingleLesson);

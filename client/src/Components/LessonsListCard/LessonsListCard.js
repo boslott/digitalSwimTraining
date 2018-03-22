@@ -21,7 +21,7 @@ class LessonsListCard extends Component {
               <p className='list-card__lesson-runtime'>Runtime {this.props.lesson.runtime}</p>
             </div>
             <div className='row list-card__lesson-title'>
-              <Link to={`/courses/${this.props.lesson.associatedCourseSlug}/episode${this.props.lesson.episodeNum}`}>
+              <Link to={`/courses/${this.props.index}/${this.props.lesson.associatedCourseSlug}/episode${this.props.lesson.episodeNum}`}>
                 <p>{this.props.lesson.title}</p>
               </Link>
             </div>

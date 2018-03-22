@@ -29,7 +29,7 @@ const store = createStore(
   load(),
   composeWithDevTools(applyMiddleware(...middleware, save())),
 );
-store.subscribe(() => console.log('store', store.getState()));
+// store.subscribe(() => console.log('store', store.getState()));
 
 
 ReactDOM.render(

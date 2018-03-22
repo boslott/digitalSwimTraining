@@ -30,7 +30,7 @@ class CourseJumbo extends Component {
                 </div>
               </div>
               <div className='row jumbo__buttons-row'>
-                <Link to={`/courses/${this.props.course.slug}/episode1`}>
+                <Link to={`/courses/${this.props.index}/${this.props.course.slug}/episode1`}>
                   <div className='jumbo__button'>
                     <p>START</p>
                   </div>
