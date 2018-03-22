@@ -8,14 +8,14 @@ import thunk from 'redux-thunk';
 import { save, load } from 'redux-localstorage-simple';
 import fontawesome from '@fortawesome/fontawesome';
 import brands from '@fortawesome/fontawesome-free-brands';
-import { faHome, faInfoCircle, faListUl, faEnvelope, faPlayCircle, faUserCircle } from '@fortawesome/fontawesome-free-solid'
+import { faHome, faInfoCircle, faListUl, faEnvelope, faPlayCircle, faUserCircle, faUsers } from '@fortawesome/fontawesome-free-solid'
 import './index.css';
 import App from './App';
 import './include/bootstrap';
 import rootReducer from './rootReducer';
 
 // Font Awesome icons library
-fontawesome.library.add(brands, faHome, faInfoCircle, faListUl, faEnvelope, faPlayCircle, faUserCircle);
+fontawesome.library.add(brands, faHome, faInfoCircle, faListUl, faEnvelope, faPlayCircle, faUserCircle, faUsers);
 
 // Redux Middleware
 const middleware = [logger, thunk];
