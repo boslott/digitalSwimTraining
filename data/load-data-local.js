@@ -16,10 +16,16 @@ const courses = JSON.parse(fs.readFileSync(`${__dirname}/courses-local.json`, 'u
 
 async function deleteData() {
   console.log('😢😢 Goodbye Data...');
-  await Course.remove();
-  // await Review.remove();
-  console.log('Data Deleted. To load sample data, run\n\n\t npm run sample\n\n');
-  process.exit();
+  try {
+    await Course.remove();
+    // await Review.remove();
+    console.log('Data Deleted. To load sample data, run\n\n\t npm run sample\n\n');
+    process.exit();
+  } catch (e) {
+    console.log('loadData caught error 😢😢😢😢');
+    console.log(e);
+    process.exit();
+  }
 }
 
 async function loadData() {

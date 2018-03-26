@@ -5,10 +5,10 @@ import { connect } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 // Components
-import Routes from './Routes';
+import Routes from './Components/Routes/Routes';
 import { getCourses } from './actions';
 
-class App extends Component {
+export class App extends Component {
 
   state = {
     isAuthenticated: false,
