@@ -3,17 +3,17 @@ import React from 'react';
 import { Switch } from 'react-router-dom';
 
 // Components
-import AppliedRoute from './Components/AppliedRoute';
+import AppliedRoute from '../AppliedRoute/AppliedRoute';
 
 // Pages
-import Home from './Pages/Home';
-import Register from './Pages/Register';
-import SignIn from './Pages/SignIn';
-import About from './Pages/About/About';
-import Courses from './Pages/Courses';
-import CourseOverview from './Pages/CourseOverview';
-import SingleLesson from './Pages/SingleLesson';
-import NotFound from './Pages/NotFound';
+import Home from '../../Pages/Home';
+import Register from '../../Pages/Register';
+import SignIn from '../../Pages/SignIn';
+import About from '../../Pages/About/About';
+import Courses from '../../Pages/Courses';
+import CourseOverview from '../../Pages/CourseOverview';
+import SingleLesson from '../../Pages/SingleLesson';
+import NotFound from '../../Pages/NotFound';
 
 export default ({ childProps }) => (
   <Switch>
